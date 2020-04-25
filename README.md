@@ -11,7 +11,7 @@ First we need to write few imports:
 ```rust
 #![feature(proc_macro_hygiene, decl_macro)]
 #[macro_use]
-extern crate rocket;
+extern crate vogue;
 
 use vogue::app::start;
 use vogue::response::content::Html;
