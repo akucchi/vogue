@@ -1,7 +1,6 @@
 use super::chrome::Chrome;
 use rocket;
 use rocket::config::Environment;
-use rocket::response::content;
 use rocket::Config;
 use std::collections::hash_map::DefaultHasher;
 use std::hash::Hasher;
