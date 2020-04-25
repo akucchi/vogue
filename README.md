@@ -2,7 +2,7 @@
 
 Vogue is a library for building Electron-like applications with Rust, HTML, CSS and JavaScript.
 
-<p align="center"><img src="https://raw.githubusercontent.com/akucchi/vogue/master/images/preview.png" /></p>
+<p align="center"><img alt="preview" width="100%" src="https://raw.githubusercontent.com/akucchi/vogue/master/images/preview.png" /></p>
 
 ## Hello, world!
 
