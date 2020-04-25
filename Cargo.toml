@@ -5,6 +5,7 @@ authors = ["aku"]
 edition = "2018"
 
 [dependencies]
+rocket = "0.4.4"
 
 [target.'cfg(windows)'.dependencies]
 winreg = "0.7"
