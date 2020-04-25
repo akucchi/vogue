@@ -49,6 +49,22 @@ impl Chrome {
 
 const REG_PATH: &str = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\chrome.exe";
 
+/// Find chrome executable on Linux.
+fn find_path_linux() -> Option<String> {
+    use which::which;
+
+    let mut path = None;
+
+    for name in vec!["chromium-browser", "chromium", "google-chrome", "google-chrome-stable"] {
+        match which(name) {
+            Ok(p) => path = Some(p.to_str().unwrap().to_string()),
+            Err(_) => continue,
+        }
+    }
+
+    path
+}
+
 /// Find chrome executable on Windows.
 fn find_path_windows() -> Option<String> {
     use winreg::enums::{HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE};
@@ -83,6 +99,8 @@ fn find_path_windows() -> Option<String> {
 pub fn find_path() -> Option<String> {
     if cfg!(windows) {
         find_path_windows()
+    } else if cfg!(linux) {
+        find_path_linux()
     } else {
         None
     }
