@@ -4,6 +4,16 @@ Vogue is a library for building Electron-like applications with Rust, HTML, CSS 
 
 <p align="center"><img alt="preview" width="100%" src="https://raw.githubusercontent.com/akucchi/vogue/master/images/preview.png" /></p>
 
+## Install
+
+Add following lines to your `Cargo.toml`:
+
+```toml
+[dependencies]
+vogue = { git = "https://github.com/akucchi/vogue" }
+rocket = "0.4.4"
+```
+
 ## Hello, world!
 
 First we need to write few imports:
