@@ -1,0 +1,10 @@
+[package]
+name = "vogue"
+version = "0.1.0"
+authors = ["aku"]
+edition = "2018"
+
+[dependencies]
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.7"
